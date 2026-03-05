@@ -1,23 +1,30 @@
 "use client"
 
-import Particles from "react-tsparticles"
+import { useEffect, useState } from "react"
+import Particles from "@tsparticles/react"
+import { loadSlim } from "tsparticles-slim"
 
-export default function ParticlesBg(){
+export default function ParticlesBg() {
 
-return(
+ const [init, setInit] = useState(false)
 
-<Particles
- options={{
-   background:{color:"#000"},
-   particles:{
-     number:{value:60},
-     size:{value:2},
-     move:{enable:true,speed:1},
-     links:{enable:true,color:"#ffffff"}
-   }
- }}
-/>
+ useEffect(() => {
+  loadSlim().then(() => setInit(true))
+ }, [])
 
-)
+ if (!init) return null
 
+ return (
+  <Particles
+   options={{
+    background: { color: "#000" },
+    particles: {
+      number: { value: 50 },
+      size: { value: 2 },
+      move: { enable: true, speed: 1 },
+      links: { enable: true, color: "#ffffff" }
+    }
+   }}
+  />
+ )
 }
