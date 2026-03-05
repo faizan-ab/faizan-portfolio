@@ -75,7 +75,12 @@ export default function Home() {
 <FaGitAlt />
 <p className="text-sm mt-2">Git</p>
 </div>
-
+<div className="fixed inset-0 -z-10">
+  <ParticlesBg />
+</div>
+<div className="fixed inset-0 -z-10">
+  <ParticlesBg />
+</div>
 </div>
 
 
