@@ -1,0 +1,7 @@
+<a
+href="/resume.pdf"
+className="bg-white text-black px-6 py-3 rounded-xl"
+download
+>
+Download Resume
+</a>

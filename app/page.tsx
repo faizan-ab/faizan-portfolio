@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion"
 import Projects from "./components/Projects"
+import { FaDocker, FaAws, FaJenkins, FaLinux, FaGitAlt } from "react-icons/fa"
+import Terminal from "./components/Terminal"
+import ParticlesBg from "./components/ParticlesBg"
 
 export default function Home() {
 
  return (
   <main className="bg-black text-white min-h-screen px-10 py-20">
-
+  <ParticlesBg/>
   {/* Hero */}
 
   <motion.section
@@ -24,7 +27,7 @@ export default function Home() {
   <p className="text-xl text-gray-400">
    DevOps & Cloud Engineer
   </p>
-
+  <Terminal/>
   </motion.section>
 
 
@@ -46,28 +49,34 @@ export default function Home() {
 
   {/* Skills */}
 
-  <section className="text-center mb-32">
+  <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-4xl text-center">
 
-  <h2 className="text-3xl font-bold mb-10">
-   Skills
-  </h2>
+<div>
+<FaAws />
+<p className="text-sm mt-2">AWS</p>
+</div>
 
-  <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+<div>
+<FaDocker />
+<p className="text-sm mt-2">Docker</p>
+</div>
 
-  {["AWS","Docker","Kubernetes","Terraform","Jenkins","Linux"].map(skill => (
+<div>
+<FaJenkins />
+<p className="text-sm mt-2">Jenkins</p>
+</div>
 
-  <div
-   key={skill}
-   className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition"
-  >
-   {skill}
-  </div>
+<div>
+<FaLinux />
+<p className="text-sm mt-2">Linux</p>
+</div>
 
-  ))}
+<div>
+<FaGitAlt />
+<p className="text-sm mt-2">Git</p>
+</div>
 
-  </div>
-
-  </section>
+</div>
 
 
   {/* Projects */}
@@ -81,6 +90,15 @@ export default function Home() {
   <Projects/>
 
   </section>
+  <section className="text-center mt-20">
+
+<h2 className="text-3xl font-bold mb-6">
+GitHub Stats
+</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=faizan-ab&show_icons=true&theme=dark"/>
+
+</section>
 
 
   {/* Contact */}
