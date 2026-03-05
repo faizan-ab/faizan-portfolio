@@ -2,7 +2,7 @@
 
 import { useCallback } from "react"
 import Particles from "@tsparticles/react"
-import { loadSlim } from "tsparticles-slim"
+import { loadSlim } from "@tsparticles/slim"
 
 export default function ParticlesBg() {
 
