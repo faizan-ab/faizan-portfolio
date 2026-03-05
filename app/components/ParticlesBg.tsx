@@ -13,7 +13,6 @@ export default function ParticlesBg() {
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={{
         background: {
           color: "#000"
